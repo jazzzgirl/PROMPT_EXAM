@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>시험용 PROMPT 작성 웹페이지</title>
+<meta name="description" content="PROMPT 6요소에 맞춰 프롬프트를 작성하고 바로 복사하는 페이지입니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="시험용 PROMPT 작성 웹페이지">
+  <div class="wrap">
+    <span class="brand" aria-label="PROMPT">
+      <span data-k="p1">P</span><span data-k="r">R</span><span data-k="o">O</span><span data-k="m">M</span><span data-k="p2">P</span><span data-k="t">T</span>
+    </span>
+    <span class="exam-tag">실기 평가</span>
+  </div>
+</nav>
+
+<main>
+<section class="exam-head">
+  <div class="wrap">
+    <h1>시험용 PROMPT 작성 웹페이지</h1>
+    <p class="lead">왼쪽 입력창을 PROMPT 6요소에 맞춰 채우면 오른쪽에 전체 프롬프트가 완성됩니다. <br>
+      복사 버튼을 눌러 시험 파일의 텍스트 셀에 넣고 AI에게 보내세요.</p>
+  </div>
+</section>
+
+<section class="exam-body">
+  <div class="wrap">
+    <div class="toolbar">
+      <button class="btn ghost" id="clearAll" type="button">모두 지우기</button>
+      <div class="progress" aria-live="polite"><div class="dots" id="dots"></div><span id="progressText">6개 중 0개 작성</span></div>
+    </div>
+
+    <div class="builder">
+      <form id="form" onsubmit="return false"></form>
+      <div class="preview">
+        <div class="pblock">
+          <div class="pblock-head"><strong>완성된 프롬프트</strong><button class="btn sm" id="copyBuilt" type="button">프롬프트 복사</button></div>
+          <div class="pblock-body" id="builtBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="after" id="after"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>2026년 2학기 인공지능과 디지털 사고</strong>
+    <span>prof. 김지연</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/exam-data.js"></script>
+<script src="js/exam.js"></script>
+</body>
+</html>
